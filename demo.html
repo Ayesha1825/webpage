@@ -5,95 +5,130 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Anjum Composite PU College</title>
+    <meta name="description"
+          content="Anjum Composite PU College - 1st PUC and 2nd PUC education in Science, Commerce and Arts.">
+
+    <title>Anjum Composite PU College | Davanagere</title>
+
 
     <style>
 
-        /* =========================
-           GENERAL SETTINGS
-        ========================== */
+        /* =====================================================
+           BASIC RESET
+        ====================================================== */
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+
+        html {
             scroll-behavior: smooth;
         }
 
+
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #f4f8fc;
-            color: #222;
+            background-color: #f4f8fc;
+            color: #1c2733;
             line-height: 1.6;
         }
+
 
         a {
             text-decoration: none;
         }
 
-        /* =========================
-           HEADER
-        ========================== */
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* =====================================================
+           NAVIGATION BAR
+        ====================================================== */
 
         header {
             background: #061b3a;
             color: white;
-            padding: 18px 7%;
+            padding: 16px 7%;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
         }
 
-        .nav {
+
+        .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 20px;
+            gap: 25px;
         }
+
 
         .logo {
             font-size: 23px;
             font-weight: bold;
+            color: white;
+            white-space: nowrap;
         }
+
+
+        .logo span {
+            color: #62c8ff;
+        }
+
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 20px;
+            gap: 22px;
             flex-wrap: wrap;
+            justify-content: center;
         }
+
 
         .nav-links a {
             color: white;
+            font-size: 15px;
             font-weight: bold;
             transition: 0.3s;
         }
 
+
         .nav-links a:hover {
-            color: #65c7ff;
+            color: #62c8ff;
         }
 
-        /* =========================
+
+        /* =====================================================
            HERO SECTION
-        ========================== */
+        ====================================================== */
 
         .hero {
-            min-height: 540px;
+            min-height: 580px;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             text-align: center;
-            padding: 70px 7%;
+
+            padding: 80px 7%;
+
             color: white;
 
             background:
                 linear-gradient(
-                    rgba(6,27,58,0.88),
-                    rgba(17,91,145,0.82)
+                    rgba(6, 27, 58, 0.90),
+                    rgba(10, 87, 137, 0.86)
                 ),
                 url("https://images.unsplash.com/photo-1564981797816-1043664bf78d?auto=format&fit=crop&w=1600&q=80");
 
@@ -101,35 +136,41 @@
             background-position: center;
         }
 
+
         .hero-content {
-            max-width: 900px;
+            max-width: 950px;
         }
 
+
         .hero h1 {
-            font-size: 48px;
-            margin-bottom: 15px;
+            font-size: 52px;
+            line-height: 1.2;
+            margin-bottom: 20px;
         }
+
 
         .hero p {
             font-size: 19px;
             margin-bottom: 12px;
         }
 
+
         .hero-highlight {
-            color: #8bd3ff;
-            font-size: 23px;
+            color: #75d1ff;
+            font-size: 24px !important;
             font-weight: bold;
-            margin: 20px 0;
+            margin: 22px 0 !important;
         }
 
-        /* =========================
+
+        /* =====================================================
            BUTTONS
-        ========================== */
+        ====================================================== */
 
         .btn {
             display: inline-block;
-            padding: 13px 27px;
-            margin: 7px;
+            padding: 13px 28px;
+            margin: 8px 5px;
             border-radius: 7px;
             background: #1688cf;
             color: white;
@@ -137,484 +178,759 @@
             transition: 0.3s;
         }
 
+
         .btn:hover {
-            background: #0b6da8;
+            background: #0b6ca7;
             transform: translateY(-2px);
         }
 
-        .btn-light {
+
+        .btn-white {
             background: white;
             color: #061b3a;
         }
 
-        .btn-light:hover {
+
+        .btn-white:hover {
             background: #dcefff;
         }
 
-        /* =========================
-           SECTIONS
-        ========================== */
+
+        /* =====================================================
+           COMMON SECTION
+        ====================================================== */
 
         .section {
-            padding: 65px 7%;
+            padding: 70px 7%;
         }
+
 
         .section-title {
             text-align: center;
             color: #061b3a;
-            font-size: 34px;
-            margin-bottom: 10px;
+            font-size: 36px;
+            margin-bottom: 8px;
         }
+
 
         .section-subtitle {
             text-align: center;
-            color: #5d6b78;
-            margin-bottom: 38px;
+            color: #667786;
+            margin-bottom: 40px;
         }
 
-        /* =========================
+
+        /* =====================================================
            NOTICE
-        ========================== */
+        ====================================================== */
 
         .notice {
-            max-width: 1000px;
-            margin: 25px auto;
-            padding: 18px 22px;
-            background: #e4f3ff;
+            max-width: 1050px;
+            margin: 30px auto;
+            padding: 20px 25px;
+
+            background: #e4f4ff;
+
             border-left: 5px solid #1688cf;
-            border-radius: 7px;
-            color: #18344f;
+
+            border-radius: 8px;
+
+            color: #173b57;
         }
 
-        /* =========================
-           ABOUT
-        ========================== */
 
-        .about {
+        /* =====================================================
+           ABOUT SECTION
+        ====================================================== */
+
+        .about-container {
             max-width: 950px;
             margin: auto;
             text-align: center;
         }
 
-        .about p {
-            margin-bottom: 16px;
+
+        .about-container p {
+            margin-bottom: 17px;
         }
+
+
+        .badges {
+            margin-top: 25px;
+        }
+
 
         .badge {
             display: inline-block;
-            padding: 7px 14px;
+
+            padding: 7px 15px;
             margin: 5px;
-            background: #e0f2ff;
-            color: #07527f;
+
             border-radius: 20px;
+
+            background: #dff2ff;
+
+            color: #07527f;
+
             font-weight: bold;
+
             font-size: 14px;
         }
 
-        /* =========================
+
+        /* =====================================================
            COURSE CARDS
-        ========================== */
+        ====================================================== */
 
         .cards {
             display: grid;
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
+
 
         .card {
             background: white;
             padding: 30px;
+
             border-radius: 12px;
-            box-shadow: 0 5px 18px rgba(6,27,58,0.09);
+
+            box-shadow: 0 5px 20px rgba(6, 27, 58, 0.09);
+
             transition: 0.3s;
         }
 
+
         .card:hover {
             transform: translateY(-7px);
-            box-shadow: 0 9px 25px rgba(6,27,58,0.15);
+
+            box-shadow:
+                0 10px 28px rgba(6, 27, 58, 0.16);
         }
+
 
         .card h3 {
+            font-size: 26px;
             color: #0b5688;
-            font-size: 25px;
-            margin-bottom: 12px;
+            margin-bottom: 13px;
         }
 
+
         .card ul {
-            margin-top: 15px;
             padding-left: 20px;
+            margin-top: 15px;
         }
+
 
         .card li {
             margin-bottom: 8px;
         }
 
+
         .science {
-            border-top: 6px solid #1261a0;
+            border-top: 6px solid #145da0;
         }
+
 
         .commerce {
             border-top: 6px solid #1688cf;
         }
 
+
         .arts {
             border-top: 6px solid #2b9acb;
         }
 
-        /* =========================
+
+        /* =====================================================
            FEE TABLE
-        ========================== */
+        ====================================================== */
 
         .table-container {
             overflow-x: auto;
         }
 
+
         .fee-table {
             width: 100%;
+
             border-collapse: collapse;
+
             background: white;
+
             border-radius: 10px;
+
             overflow: hidden;
-            box-shadow: 0 5px 18px rgba(6,27,58,0.09);
+
+            box-shadow:
+                0 5px 20px rgba(6, 27, 58, 0.09);
         }
+
 
         .fee-table th,
         .fee-table td {
             padding: 16px;
+
             border-bottom: 1px solid #dce4eb;
+
             text-align: left;
         }
+
 
         .fee-table th {
             background: #061b3a;
             color: white;
         }
 
+
         .fee-table tr:hover {
             background: #eef8ff;
         }
 
+
         .fee-note {
             margin-top: 20px;
-            padding: 16px;
-            background: #e8f5ff;
+
+            padding: 18px;
+
+            background: #e5f5ff;
+
             border-radius: 8px;
-            color: #18344f;
+
+            color: #17405d;
         }
 
-        /* =========================
+
+        /* =====================================================
            COACHING SECTION
-        ========================== */
+        ====================================================== */
 
         .coaching-section {
-            background: #e9f5ff;
+            background: #eaf6ff;
         }
 
-        .coaching-box {
+
+        .coaching-grid {
             display: grid;
+
             grid-template-columns: 1fr 1fr;
+
             gap: 25px;
+
             max-width: 1050px;
+
             margin: auto;
         }
+
 
         .coaching-card {
             background: white;
+
             padding: 30px;
+
             border-radius: 12px;
-            box-shadow: 0 5px 18px rgba(6,27,58,0.09);
+
+            box-shadow:
+                0 5px 20px rgba(6, 27, 58, 0.09);
         }
+
 
         .coaching-card h3 {
             color: #061b3a;
-            font-size: 25px;
+
+            font-size: 26px;
+
             margin-bottom: 12px;
         }
 
+
         .coaching-card ul {
             list-style: none;
+
             margin-top: 15px;
         }
 
+
         .coaching-card li {
-            margin: 11px 0;
+            margin: 10px 0;
         }
 
-        .free-coaching {
-            margin-top: 18px;
-            padding: 12px;
-            background: #dff3ff;
+
+        .free-box {
+            margin-top: 20px;
+
+            padding: 13px;
+
+            background: #dff4ff;
+
             color: #07527f;
+
             border-radius: 7px;
+
             font-weight: bold;
         }
 
-        /* =========================
+
+        /* =====================================================
            FACILITIES
-        ========================== */
+        ====================================================== */
 
         .facilities {
             display: grid;
-            grid-template-columns: repeat(4,1fr);
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
             gap: 18px;
         }
+
 
         .facility {
             background: white;
-            padding: 25px 15px;
+
+            padding: 27px 17px;
+
             text-align: center;
+
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(6,27,58,0.08);
+
+            box-shadow:
+                0 4px 15px rgba(6, 27, 58, 0.08);
         }
 
+
         .facility-icon {
-            font-size: 35px;
+            font-size: 36px;
+
             margin-bottom: 10px;
         }
 
+
         .facility h3 {
             color: #0b5688;
+
             margin-bottom: 8px;
         }
 
-        /* =========================
-           ADMISSION STEPS
-        ========================== */
 
-        .admission-steps {
+        /* =====================================================
+           ADMISSION PROCESS
+        ====================================================== */
+
+        .steps {
             max-width: 850px;
+
             margin: auto;
         }
+
 
         .step {
             display: flex;
+
             align-items: flex-start;
+
             gap: 18px;
+
             background: white;
+
             padding: 20px;
+
             margin-bottom: 15px;
+
             border-radius: 10px;
-            box-shadow: 0 4px 14px rgba(6,27,58,0.07);
+
+            box-shadow:
+                0 4px 15px rgba(6, 27, 58, 0.07);
         }
+
 
         .step-number {
             min-width: 45px;
+
             height: 45px;
+
             border-radius: 50%;
+
             background: #061b3a;
+
             color: white;
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
+
             font-weight: bold;
+
             font-size: 19px;
         }
 
+
         .step h3 {
             color: #0b5688;
+
             margin-bottom: 5px;
         }
 
-        /* =========================
-           FORM
-        ========================== */
+
+        /* =====================================================
+           ADMISSION FORM
+        ====================================================== */
 
         .form-container {
-            max-width: 850px;
+            max-width: 900px;
+
             margin: auto;
+
             background: white;
+
             padding: 35px;
+
             border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(6,27,58,0.09);
+
+            box-shadow:
+                0 5px 22px rgba(6, 27, 58, 0.10);
         }
+
 
         .form-row {
             display: grid;
+
             grid-template-columns: 1fr 1fr;
+
             gap: 18px;
         }
 
+
         .form-group {
-            margin-bottom: 18px;
+            margin-bottom: 19px;
         }
+
 
         label {
             display: block;
+
             font-weight: bold;
+
             margin-bottom: 7px;
-            color: #18344f;
+
+            color: #173b57;
         }
+
 
         input,
         select,
         textarea {
             width: 100%;
+
             padding: 12px;
+
             border: 1px solid #bdccd8;
+
             border-radius: 6px;
+
             font-size: 15px;
+
+            font-family: inherit;
+
             outline: none;
         }
+
 
         input:focus,
         select:focus,
         textarea:focus {
             border-color: #1688cf;
+
+            box-shadow:
+                0 0 0 2px rgba(22, 136, 207, 0.12);
         }
 
+
         textarea {
-            min-height: 110px;
+            min-height: 120px;
+
             resize: vertical;
         }
 
+
+        /* =====================================================
+           SSLC SECTION
+        ====================================================== */
+
+        #sslcSection {
+            display: none;
+
+            margin: 25px 0;
+
+            padding: 25px;
+
+            background: #eef8ff;
+
+            border-radius: 10px;
+
+            border-left: 5px solid #1688cf;
+        }
+
+
+        #sslcSection h3 {
+            color: #061b3a;
+
+            margin-bottom: 18px;
+        }
+
+
         .submit-btn {
             width: 100%;
+
             border: none;
+
             padding: 14px;
+
             border-radius: 7px;
+
             background: #061b3a;
+
             color: white;
+
             font-size: 17px;
+
             font-weight: bold;
+
             cursor: pointer;
+
+            transition: 0.3s;
         }
+
 
         .submit-btn:hover {
             background: #0b5688;
         }
 
-        /* =========================
-           CONTACT
-        ========================== */
 
-        .contact-box {
+        .privacy-note {
+            margin-top: 18px;
+
+            padding: 14px;
+
+            background: #f2f7fb;
+
+            color: #5d6b78;
+
+            border-radius: 7px;
+
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           SUCCESS MESSAGE
+        ====================================================== */
+
+        #successMessage {
+            display: none;
+
+            margin-bottom: 25px;
+
+            padding: 18px;
+
+            background: #dff7e8;
+
+            color: #176b39;
+
+            border-left: 5px solid #27a85b;
+
+            border-radius: 7px;
+
+            font-weight: bold;
+        }
+
+
+        /* =====================================================
+           CONTACT
+        ====================================================== */
+
+        .contact-grid {
             display: grid;
-            grid-template-columns: repeat(3,1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 20px;
         }
 
-        .contact-item {
+
+        .contact-card {
             background: white;
+
             padding: 28px 20px;
+
             text-align: center;
+
             border-radius: 10px;
-            box-shadow: 0 4px 14px rgba(6,27,58,0.08);
+
+            box-shadow:
+                0 4px 15px rgba(6, 27, 58, 0.08);
         }
 
-        .contact-item h3 {
+
+        .contact-card h3 {
             color: #061b3a;
+
             margin-bottom: 10px;
         }
 
-        .contact-placeholder {
+
+        .placeholder {
             color: #1688cf;
+
             font-weight: bold;
+
             letter-spacing: 2px;
         }
 
-        /* =========================
+
+        /* =====================================================
            FOOTER
-        ========================== */
+        ====================================================== */
 
         footer {
             background: #061b3a;
+
             color: white;
+
             text-align: center;
-            padding: 32px 7%;
+
+            padding: 35px 7%;
         }
+
 
         footer h2 {
             margin-bottom: 10px;
         }
 
-        footer p {
-            margin: 7px 0;
-        }
 
         .footer-line {
             width: 80px;
+
             height: 3px;
+
             background: #1688cf;
+
             margin: 15px auto;
         }
 
-        /* =========================
-           MOBILE DESIGN
-        ========================== */
 
-        @media (max-width:950px) {
+        footer p {
+            margin: 6px 0;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE DESIGN
+        ====================================================== */
+
+        @media (max-width: 1000px) {
 
             .cards {
                 grid-template-columns: 1fr;
             }
 
+
             .facilities {
-                grid-template-columns: repeat(2,1fr);
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
-            .coaching-box {
+
+            .coaching-grid {
                 grid-template-columns: 1fr;
             }
 
-            .contact-box {
+
+            .contact-grid {
                 grid-template-columns: 1fr;
             }
+
 
             .hero h1 {
-                font-size: 40px;
+                font-size: 43px;
             }
+
         }
 
-        @media (max-width:650px) {
+
+        @media (max-width: 700px) {
 
             header {
                 position: static;
             }
 
-            .nav {
+
+            .navbar {
                 flex-direction: column;
             }
 
+
             .nav-links {
-                justify-content: center;
                 gap: 12px;
             }
 
+
             .hero {
-                min-height: 500px;
+                min-height: 520px;
+
+                padding: 60px 5%;
             }
 
+
             .hero h1 {
-                font-size: 32px;
+                font-size: 34px;
             }
+
 
             .hero p {
                 font-size: 17px;
             }
 
+
             .section {
-                padding: 45px 5%;
+                padding: 50px 5%;
             }
 
+
             .section-title {
-                font-size: 28px;
+                font-size: 29px;
             }
+
 
             .facilities {
                 grid-template-columns: 1fr;
             }
 
+
             .form-row {
                 grid-template-columns: 1fr;
             }
+
 
             .form-container {
                 padding: 22px;
             }
 
+
             .step {
                 flex-direction: column;
             }
+
+
+            .logo {
+                white-space: normal;
+
+                text-align: center;
+            }
+
         }
 
     </style>
@@ -625,17 +941,20 @@
 <body>
 
 
-    <!-- =========================
-         HEADER
-    ========================== -->
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
 
     <header>
 
-        <div class="nav">
+        <nav class="navbar">
 
             <div class="logo">
-                Anjum Composite PU College
+
+                Anjum <span>Composite PU College</span>
+
             </div>
+
 
             <ul class="nav-links">
 
@@ -669,40 +988,48 @@
 
             </ul>
 
-        </div>
+        </nav>
 
     </header>
 
 
-    <!-- =========================
-         HOME / HERO
-    ========================== -->
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
     <section class="hero" id="home">
 
         <div class="hero-content">
 
             <h1>
-                Welcome to Anjum Composite PU College
+                Anjum Composite PU College
             </h1>
 
+
             <p>
-                Quality Education • Academic Guidance • Student Development
+                Quality Education • Academic Guidance •
+                Student Development
             </p>
+
 
             <p class="hero-highlight">
                 Admissions Open for 1st & 2nd PUC
             </p>
 
+
             <p>
-                Science &nbsp; | &nbsp; Commerce &nbsp; | &nbsp; Arts
+                Science &nbsp; | &nbsp;
+                Commerce &nbsp; | &nbsp;
+                Arts
             </p>
+
 
             <a href="#admission" class="btn">
                 Apply for Admission
             </a>
 
-            <a href="#courses" class="btn btn-light">
+
+            <a href="#courses" class="btn btn-white">
                 Explore Courses
             </a>
 
@@ -711,25 +1038,24 @@
     </section>
 
 
-    <!-- =========================
-         ADMISSION NOTICE
-    ========================== -->
+    <!-- =====================================================
+         NOTICE
+    ====================================================== -->
 
     <div class="notice">
 
         <strong>Admission Notice:</strong>
 
-        Admissions are available for 1st PUC and eligible 2nd PUC students.
-        Students can choose from Science, Commerce, and Arts streams.
-        Please contact the college office for the latest admission schedule,
-        seat availability, and admission requirements.
+        Admissions are available for 1st PUC and eligible
+        2nd PUC students. Students can choose from Science,
+        Commerce and Arts streams.
 
     </div>
 
 
-    <!-- =========================
-         ABOUT SECTION
-    ========================== -->
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
 
     <section class="section" id="about">
 
@@ -737,11 +1063,13 @@
             About Our College
         </h2>
 
+
         <p class="section-subtitle">
             Building strong academic foundations for students
         </p>
 
-        <div class="about">
+
+        <div class="about-container">
 
             <p>
 
@@ -751,23 +1079,26 @@
 
             </p>
 
+
             <p>
 
                 The college offers
                 <strong>1st PUC and 2nd PUC</strong>
                 education in three streams:
-                <strong>Science, Commerce, and Arts.</strong>
+                <strong>Science, Commerce and Arts.</strong>
 
             </p>
+
 
             <p>
 
                 The college focuses on academic learning,
-                regular examination preparation,
-                discipline, student development, and
-                guidance for higher education.
+                regular examination preparation, discipline,
+                student development and guidance for
+                higher education.
 
             </p>
+
 
             <p>
 
@@ -777,7 +1108,8 @@
 
             </p>
 
-            <div>
+
+            <div class="badges">
 
                 <span class="badge">
                     1st PUC
@@ -803,4 +1135,1420 @@
                     KCET Coaching
                 </span>
 
-                <span class="badge
+                <span class="badge">
+                    NEET Coaching
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         COURSES
+    ====================================================== -->
+
+    <section class="section" id="courses">
+
+        <h2 class="section-title">
+            Courses Offered
+        </h2>
+
+
+        <p class="section-subtitle">
+            Choose a stream according to your interests
+            and future plans
+        </p>
+
+
+        <div class="cards">
+
+
+            <!-- SCIENCE -->
+
+            <div class="card science">
+
+                <h3>
+                    Science Stream
+                </h3>
+
+
+                <p>
+
+                    Suitable for students interested in
+                    science, medicine, engineering,
+                    technology and related fields.
+
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        Physics
+                    </li>
+
+                    <li>
+                        Chemistry
+                    </li>
+
+                    <li>
+                        Mathematics
+                    </li>
+
+                    <li>
+                        Biology
+                    </li>
+
+                    <li>
+                        Practical learning
+                    </li>
+
+                    <li>
+                        PUC examination preparation
+                    </li>
+
+                    <li>
+                        KCET coaching
+                    </li>
+
+                    <li>
+                        NEET coaching
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- COMMERCE -->
+
+            <div class="card commerce">
+
+                <h3>
+                    Commerce Stream
+                </h3>
+
+
+                <p>
+
+                    Suitable for students interested in
+                    business, accounting, finance,
+                    economics and management-related fields.
+
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        Accountancy
+                    </li>
+
+                    <li>
+                        Business Studies
+                    </li>
+
+                    <li>
+                        Economics
+                    </li>
+
+                    <li>
+                        Statistics / relevant subjects
+                    </li>
+
+                    <li>
+                        Academic practice
+                    </li>
+
+                    <li>
+                        PUC examination preparation
+                    </li>
+
+                    <li>
+                        Career guidance
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- ARTS -->
+
+            <div class="card arts">
+
+                <h3>
+                    Arts Stream
+                </h3>
+
+
+                <p>
+
+                    Suitable for students interested in
+                    humanities, social sciences, languages,
+                    public service and related areas.
+
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        History
+                    </li>
+
+                    <li>
+                        Political Science
+                    </li>
+
+                    <li>
+                        Economics
+                    </li>
+
+                    <li>
+                        Sociology / relevant subjects
+                    </li>
+
+                    <li>
+                        Language studies
+                    </li>
+
+                    <li>
+                        PUC examination preparation
+                    </li>
+
+                    <li>
+                        Career guidance
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FEES
+    ====================================================== -->
+
+    <section class="section" id="fees">
+
+        <h2 class="section-title">
+            Fee Structure
+        </h2>
+
+
+        <p class="section-subtitle">
+            Approximate annual fee information
+        </p>
+
+
+        <div class="table-container">
+
+            <table class="fee-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Stream
+                        </th>
+
+                        <th>
+                            Class
+                        </th>
+
+                        <th>
+                            Approximate Annual Fee
+                        </th>
+
+                        <th>
+                            Entrance Coaching
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            Science
+                        </td>
+
+                        <td>
+                            1st PUC
+                        </td>
+
+                        <td>
+                            ₹20,000+
+                        </td>
+
+                        <td>
+                            Included
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Science
+                        </td>
+
+                        <td>
+                            2nd PUC
+                        </td>
+
+                        <td>
+                            ₹20,000+
+                        </td>
+
+                        <td>
+                            Included
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Commerce
+                        </td>
+
+                        <td>
+                            1st PUC
+                        </td>
+
+                        <td>
+                            ₹15,000+
+                        </td>
+
+                        <td>
+                            Included
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Commerce
+                        </td>
+
+                        <td>
+                            2nd PUC
+                        </td>
+
+                        <td>
+                            ₹15,000+
+                        </td>
+
+                        <td>
+                            Included
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Arts
+                        </td>
+
+                        <td>
+                            1st PUC
+                        </td>
+
+                        <td>
+                            ₹12,000+
+                        </td>
+
+                        <td>
+                            Included
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Arts
+                        </td>
+
+                        <td>
+                            2nd PUC
+                        </td>
+
+                        <td>
+                            ₹12,000+
+                        </td>
+
+                        <td>
+                            Included
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <div class="fee-note">
+
+            <strong>Important:</strong>
+
+            The displayed fee figures are approximate
+            placeholders for the website. Please confirm
+            the official fee structure with the college
+            before admission.
+
+
+            <br><br>
+
+
+            <strong>
+                There is no additional fee for KCET or
+                NEET coaching.
+            </strong>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         COACHING
+    ====================================================== -->
+
+    <section class="section coaching-section" id="coaching">
+
+        <h2 class="section-title">
+            KCET & NEET Coaching
+        </h2>
+
+
+        <p class="section-subtitle">
+            Entrance examination preparation for
+            interested students
+        </p>
+
+
+        <div class="coaching-grid">
+
+
+            <!-- KCET -->
+
+            <div class="coaching-card">
+
+                <h3>
+                    KCET Coaching
+                </h3>
+
+
+                <p>
+
+                    Students interested in KCET preparation
+                    can receive academic guidance and
+                    examination-oriented practice.
+
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        ✔ Physics preparation
+                    </li>
+
+                    <li>
+                        ✔ Chemistry preparation
+                    </li>
+
+                    <li>
+                        ✔ Mathematics preparation
+                    </li>
+
+                    <li>
+                        ✔ Practice questions
+                    </li>
+
+                    <li>
+                        ✔ Revision sessions
+                    </li>
+
+                    <li>
+                        ✔ Examination guidance
+                    </li>
+
+                </ul>
+
+
+                <div class="free-box">
+
+                    No additional fee for KCET coaching.
+
+                </div>
+
+            </div>
+
+
+            <!-- NEET -->
+
+            <div class="coaching-card">
+
+                <h3>
+                    NEET Coaching
+                </h3>
+
+
+                <p>
+
+                    Students interested in NEET preparation
+                    can receive academic guidance and
+                    entrance-oriented practice.
+
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        ✔ Physics preparation
+                    </li>
+
+                    <li>
+                        ✔ Chemistry preparation
+                    </li>
+
+                    <li>
+                        ✔ Biology preparation
+                    </li>
+
+                    <li>
+                        ✔ MCQ practice
+                    </li>
+
+                    <li>
+                        ✔ Revision sessions
+                    </li>
+
+                    <li>
+                        ✔ Examination guidance
+                    </li>
+
+                </ul>
+
+
+                <div class="free-box">
+
+                    No additional fee for NEET coaching.
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FACILITIES
+    ====================================================== -->
+
+    <section class="section">
+
+        <h2 class="section-title">
+            Student Facilities
+        </h2>
+
+
+        <p class="section-subtitle">
+            Supporting students throughout their PUC journey
+        </p>
+
+
+        <div class="facilities">
+
+
+            <div class="facility">
+
+                <div class="facility-icon">
+                    📚
+                </div>
+
+                <h3>
+                    Library
+                </h3>
+
+                <p>
+                    Academic reading and reference
+                    resources for students.
+                </p>
+
+            </div>
+
+
+            <div class="facility">
+
+                <div class="facility-icon">
+                    🔬
+                </div>
+
+                <h3>
+                    Science Learning
+                </h3>
+
+                <p>
+                    Academic support and practical
+                    learning for science students.
+                </p>
+
+            </div>
+
+
+            <div class="facility">
+
+                <div class="facility-icon">
+                    📝
+                </div>
+
+                <h3>
+                    Exam Preparation
+                </h3>
+
+                <p>
+                    Regular academic practice and
+                    examination preparation.
+                </p>
+
+            </div>
+
+
+            <div class="facility">
+
+                <div class="facility-icon">
+                    🎯
+                </div>
+
+                <h3>
+                    Career Guidance
+                </h3>
+
+                <p>
+                    Guidance for higher education
+                    and career planning.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ADMISSION PROCESS
+    ====================================================== -->
+
+    <section class="section">
+
+        <h2 class="section-title">
+            Admission Process
+        </h2>
+
+
+        <p class="section-subtitle">
+            Follow these simple steps
+        </p>
+
+
+        <div class="steps">
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    1
+                </div>
+
+                <div>
+
+                    <h3>
+                        Admission Enquiry
+                    </h3>
+
+                    <p>
+                        Submit the online admission
+                        enquiry form.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    2
+                </div>
+
+                <div>
+
+                    <h3>
+                        Select Your Stream
+                    </h3>
+
+                    <p>
+                        Choose Science, Commerce or Arts.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    3
+                </div>
+
+                <div>
+
+                    <h3>
+                        Document Verification
+                    </h3>
+
+                    <p>
+                        Submit the required academic
+                        and identification documents.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    4
+                </div>
+
+                <div>
+
+                    <h3>
+                        Fee Payment
+                    </h3>
+
+                    <p>
+                        Complete the admission fee
+                        payment according to the official
+                        fee schedule.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    5
+                </div>
+
+                <div>
+
+                    <h3>
+                        Admission Confirmation
+                    </h3>
+
+                    <p>
+                        Receive confirmation from the
+                        college admission office.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ADMISSION FORM
+    ====================================================== -->
+
+    <section class="section" id="admission">
+
+        <h2 class="section-title">
+            Admission Enquiry
+        </h2>
+
+
+        <p class="section-subtitle">
+            Fill in your details and submit your enquiry
+        </p>
+
+
+        <div class="form-container">
+
+
+            <!-- SUCCESS MESSAGE -->
+
+            <div id="successMessage">
+
+                Your admission enquiry has been submitted
+                successfully. The college admission office
+                will contact you.
+
+            </div>
+
+
+            <!-- =================================================
+                 IMPORTANT:
+                 REPLACE THE ACTION URL WITH YOUR FORMSPREE URL
+            ================================================== -->
+
+            <form
+                action="https://formspree.io/f/meaoyoag"
+                method="POST"
+                id="admissionForm">
+
+
+                <!-- STUDENT NAME -->
+
+                <div class="form-group">
+
+                    <label for="studentName">
+                        Student Full Name *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        name="student_name"
+                        placeholder="Enter student's full name"
+                        required>
+
+                </div>
+
+
+                <!-- PHONE + EMAIL -->
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Mobile Number *
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="mobile_number"
+                            placeholder="Enter mobile number"
+                            pattern="[0-9]{10}"
+                            maxlength="10"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter email address">
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- DATE OF BIRTH -->
+
+                <div class="form-group">
+
+                    <label for="dob">
+                        Date of Birth
+                    </label>
+
+                    <input
+                        type="date"
+                        id="dob"
+                        name="date_of_birth">
+
+                </div>
+
+
+                <!-- APPLYING FOR + STREAM -->
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label for="class">
+                            Applying For *
+                        </label>
+
+                        <select
+                            id="class"
+                            name="applying_for"
+                            required>
+
+                            <option value="">
+                                Select class
+                            </option>
+
+                            <option value="1st PUC">
+                                1st PUC
+                            </option>
+
+                            <option value="2nd PUC">
+                                2nd PUC
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="stream">
+                            Preferred Stream *
+                        </label>
+
+                        <select
+                            id="stream"
+                            name="preferred_stream"
+                            required>
+
+                            <option value="">
+                                Select stream
+                            </option>
+
+                            <option value="Science">
+                                Science
+                            </option>
+
+                            <option value="Commerce">
+                                Commerce
+                            </option>
+
+                            <option value="Arts">
+                                Arts
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- =================================================
+                     SSLC SECTION
+                     AUTOMATICALLY APPEARS FOR 1ST PUC
+                ================================================== -->
+
+                <div id="sslcSection">
+
+
+                    <h3>
+                        SSLC / 10th Standard Details
+                    </h3>
+
+
+                    <div class="form-row">
+
+
+                        <div class="form-group">
+
+                            <label for="sslcBoard">
+                                SSLC Board *
+                            </label>
+
+                            <select
+                                id="sslcBoard"
+                                name="sslc_board">
+
+                                <option value="">
+                                    Select board
+                                </option>
+
+                                <option value="Karnataka SSLC">
+                                    Karnataka SSLC
+                                </option>
+
+                                <option value="CBSE">
+                                    CBSE
+                                </option>
+
+                                <option value="ICSE">
+                                    ICSE
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="sslcYear">
+                                SSLC Passing Year *
+                            </label>
+
+                            <input
+                                type="number"
+                                id="sslcYear"
+                                name="sslc_passing_year"
+                                placeholder="Example: 2026"
+                                min="2000"
+                                max="2100">
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="form-row">
+
+
+                        <div class="form-group">
+
+                            <label for="sslcMarks">
+                                SSLC Total Marks
+                            </label>
+
+                            <input
+                                type="number"
+                                id="sslcMarks"
+                                name="sslc_total_marks"
+                                placeholder="Enter total marks">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="sslcPercentage">
+                                SSLC Percentage *
+                            </label>
+
+                            <input
+                                type="number"
+                                step="0.01"
+                                id="sslcPercentage"
+                                name="sslc_percentage"
+                                placeholder="Example: 85.50"
+                                min="0"
+                                max="100">
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- ENTRANCE COACHING -->
+
+                <div class="form-group">
+
+                    <label for="coaching">
+                        Interested in Entrance Coaching?
+                    </label>
+
+                    <select
+                        id="coaching"
+                        name="entrance_coaching">
+
+                        <option value="No">
+                            No
+                        </option>
+
+                        <option value="KCET">
+                            KCET
+                        </option>
+
+                        <option value="NEET">
+                            NEET
+                        </option>
+
+                        <option value="Both KCET and NEET">
+                            Both KCET and NEET
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Additional Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Write any additional enquiry here..."></textarea>
+
+                </div>
+
+
+                <!-- SUBMIT BUTTON -->
+
+                <button
+                    type="submit"
+                    class="submit-btn">
+
+                    Submit Admission Enquiry
+
+                </button>
+
+
+                <!-- PRIVACY NOTE -->
+
+                <div class="privacy-note">
+
+                    By submitting this form, you are providing
+                    your information for admission enquiry
+                    purposes. The information should be accessed
+                    only by authorized college admission staff.
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section class="section" id="contact">
+
+        <h2 class="section-title">
+            Contact Us
+        </h2>
+
+
+        <p class="section-subtitle">
+            Visit the college or contact the admission office
+        </p>
+
+
+        <div class="contact-grid">
+
+
+            <!-- ADDRESS -->
+
+            <div class="contact-card">
+
+                <h3>
+                    📍 College Address
+                </h3>
+
+
+                <p>
+
+                    Bhagath Singh Nagar,<br>
+
+                    1st Main, 1st Cross,<br>
+
+                    Davanagere, Karnataka
+
+                </p>
+
+            </div>
+
+
+            <!-- PHONE -->
+
+            <div class="contact-card">
+
+                <h3>
+                    📞 Admission Enquiry
+                </h3>
+
+
+                <!--
+                    REPLACE THE TEXT BELOW
+                    WITH THE ACTUAL PHONE NUMBER
+                -->
+
+                <p class="placeholder">
+
+                    91-8660364336
+
+                </p>
+
+
+                <p>
+                    Admission Office
+                </p>
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="contact-card">
+
+                <h3>
+                    ✉️ Email
+                </h3>
+
+
+                <!--
+                    REPLACE THE TEXT BELOW
+                    WITH THE ACTUAL EMAIL
+                -->
+
+                <p class="placeholder">
+
+                    ayeshasm1125@gmail.com
+
+                </p>
+
+
+                <p>
+                    College Admission Office
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <h2>
+            Anjum Composite PU College
+        </h2>
+
+
+        <div class="footer-line"></div>
+
+
+        <p>
+            1st PUC & 2nd PUC
+        </p>
+
+
+        <p>
+            Science | Commerce | Arts
+        </p>
+
+
+        <p>
+            KCET & NEET Coaching Available
+            Without Additional Coaching Fee
+        </p>
+
+
+        <p>
+            Bhagath Singh Nagar,
+            1st Main, 1st Cross,
+            Davanagere
+        </p>
+
+
+        <p>
+            &copy; 2026 Anjum Composite PU College.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+
+        /* =====================================================
+           1. GET FORM ELEMENTS
+        ====================================================== */
+
+        const admissionForm =
+            document.getElementById("admissionForm");
+
+
+        const classSelect =
+            document.getElementById("class");
+
+
+        const sslcSection =
+            document.getElementById("sslcSection");
+
+
+        const sslcBoard =
+            document.getElementById("sslcBoard");
+
+
+        const sslcYear =
+            document.getElementById("sslcYear");
+
+
+        const sslcPercentage =
+            document.getElementById("sslcPercentage");
+
+
+        const successMessage =
+            document.getElementById("successMessage");
+
+
+        /* =====================================================
+           2. SHOW / HIDE SSLC SECTION
+        ====================================================== */
+
+        classSelect.addEventListener(
+            "change",
+            function () {
+
+
+                if (this.value === "1st PUC") {
+
+                    sslcSection.style.display = "block";
+
+
+                    sslcBoard.required = true;
+
+                    sslcYear.required = true;
+
+                    sslcPercentage.required = true;
+
+                }
+
+                else {
+
+                    sslcSection.style.display = "none";
+
+
+                    sslcBoard.required = false;
+
+                    sslcYear.required = false;
+
+                    sslcPercentage.required = false;
+
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           3. FORM SUBMISSION
+        ====================================================== */
+
+        admissionForm.addEventListener(
+            "submit",
+            function () {
+
+                /*
+                    We DO NOT use preventDefault() here.
+
+                    That means the form is allowed to
+                    actually go to Formspree.
+
+                    Formspree will receive the submitted
+                    information.
+                */
+
+
+                successMessage.style.display = "block";
+
+
+                /*
+                    Scroll the user to the success message.
+                */
+
+                setTimeout(
+                    function () {
+
+                        successMessage.scrollIntoView({
+                            behavior: "smooth",
+                            block: "center"
+                        });
+
+                    },
+                    100
+                );
+
+            }
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>
